@@ -415,12 +415,10 @@ useEffect(() => {
           <div className="sc-title-one mb-3">
             <h4 className="cl-green">Welcome To Best Medical &amp; Health</h4>
             <h2 className="mb-3">We’re lanced most powerful treatment system.</h2>
-            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h5>
           </div>
           <div className="about-detail">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris.
+            We offer medical services with a team of medics trained to give urgent care. Our team of trained professionals are equipped with skills to respond to emergency and deliver ambulatory care.
             </p>
             <ul className="d-flex flex-wrap">
               <li className="w-50"><i className="fas fa-angle-double-right cl-green" /> Professional Doctors</li>
@@ -442,15 +440,15 @@ useEffect(() => {
           <div className="case-t-wrap bg-dblue">
             <i className="fas fa-phone-alt fs-1 cl-white" />
             <h3 className="cl-white mt-2">Emergency Cases</h3>
-            <p className="cl-white mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvina</p>
-            <a href="contact.html" className="btn btn-white btn-na case-c1"><i className="fas fa-phone-alt" /> 334 652 7885423</a>
+            <p className="cl-white mb-3"></p>
+            <a href="contact.html" className="btn btn-white btn-na case-c1"><i className="fas fa-phone-alt" /> +254 791 259985</a>
           </div>
         </div>
         <div className="col-lg-4 p-lg-0">
           <div className="case-t-wrap bg-ftblue0">
             <i className="far fa-calendar-alt fs-1 cl-white" />
             <h3 className="cl-white mt-2">Doctor Timetable</h3>
-            <p className="cl-white mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvina</p>
+            <p className="cl-white mb-3"></p>
             <a href="appointment.html" className="btn btn-white btn-na case-c2"><i className="fas fa-phone-alt" /> Discover Table</a>
           </div>
         </div>
@@ -458,7 +456,7 @@ useEffect(() => {
           <div className="case-t-wrap bg-lblue1">
             <i className="far fa-file-alt fs-1 cl-white" />
             <h3 className="cl-white mt-2">Request Appoinment</h3>
-            <p className="cl-white mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvina</p>
+            <p className="cl-white mb-3"></p>
             <a href="contact.html" className="btn btn-white-lb btn-na case-c3"><i className="fas fa-phone-alt" /> Make Appointment</a>
           </div>
         </div>
@@ -482,7 +480,7 @@ useEffect(() => {
                 <h3>Dental Surgery</h3>
               </div>
               <p className="cl-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                
               </p>
             </div>
           </a>
@@ -495,7 +493,7 @@ useEffect(() => {
                 <h3>Neurology</h3>
               </div>
               <p className="cl-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                
               </p>
             </div>
           </a>
@@ -510,7 +508,7 @@ useEffect(() => {
                 <h3>Cardiology</h3>
               </div>
               <p className="cl-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                
               </p>
             </div>
           </a>
@@ -523,7 +521,7 @@ useEffect(() => {
                 <h3>General Surgery</h3>
               </div>
               <p className="cl-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                
               </p>
             </div>
           </a>
@@ -538,7 +536,7 @@ useEffect(() => {
                 <h3>Dermatology</h3>
               </div>
               <p className="cl-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                
               </p>
             </div>
           </a>
@@ -551,15 +549,13 @@ useEffect(() => {
                 <h3>Labrotory Test</h3>
               </div>
               <p className="cl-grey">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                
               </p>
             </div>
           </a>
         </div>
       </div>
-      <div className="short-info cl-blue pt-1 mt-3 text-center">
-        <p className="cl-grey">Join Our conference &amp; events know more us also be careful myself <a href="#">Join us here</a></p>
-      </div>
+
     </div>
   </section>
   <section className="w-process bg-map bgc-dblue">
@@ -574,7 +570,7 @@ useEffect(() => {
             <div className="pcs-list p-4 bg-white">
               <i className="far fa-file-alt" />
               <h4>Experience Doctors</h4>
-              <p className="cl-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
+              <p className="cl-grey"></p>
             </div>
           </a>
         </div>
@@ -583,7 +579,7 @@ useEffect(() => {
             <div className="pcs-list p-4 bg-white">
               <i className="fas fa-laptop-medical" />
               <h4>+45 Yrs Experience</h4>
-              <p className="cl-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
+              <p className="cl-grey"></p>
             </div>
           </a>
         </div>
@@ -592,7 +588,7 @@ useEffect(() => {
             <div className="pcs-list p-4 bg-white">
               <i className="fas fa-star-of-life" />
               <h4>Standards Treatments</h4>
-              <p className="cl-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
+              <p className="cl-grey"></p>
             </div>
           </a>
         </div>
@@ -601,7 +597,7 @@ useEffect(() => {
             <div className="pcs-list p-4 bg-white mb-0">
               <i className="fas fa-user-md" />
               <h4>Best Departments</h4>
-              <p className="cl-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.</p>
+              <p className="cl-grey"></p>
             </div>
           </a>
         </div>
@@ -618,7 +614,7 @@ useEffect(() => {
             <i className="fas fa-phone-alt display-6 cl-white" />
             <div className="pl-3">
               <h4 className="cl-white">Looking For Consultation?</h4>
-              <p className="m-0 cl-white">(+6) 23 555 0892</p>
+              <p className="m-0 cl-white">+254 791 259985</p>
             </div>
           </div>
         </div>
@@ -626,7 +622,7 @@ useEffect(() => {
           <p className="call-to-mid cl-white">Contact us for all questions and thinks those. We will proud to you</p>
         </div>
         <div className="col-lg-4 col-md-12 text-center">
-          <a href="contact.html" className="btn btn-white">Get Consultation</a>
+        <a href="#" className="btn btn-white">Get Consultation</a>
         </div>
       </div>
     </div>

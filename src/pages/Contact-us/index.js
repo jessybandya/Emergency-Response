@@ -84,7 +84,6 @@ function ContactUs() {
             <h2 className="cl-lgreen fs-1 mb-3">Call: +254 791 259985</h2>
           </div>
           <div className="appoint-detail">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
           </div>
         </div>
         <div className="col-lg-6 col-md-12">
@@ -103,7 +102,7 @@ function ContactUs() {
             <i className="fas fa-phone-alt display-6 cl-white" />
             <div className="pl-3">
               <h4 className="cl-white">Looking For Consultation?</h4>
-              <p className="m-0 cl-white">(+6) 23 555 0892</p>
+              <p className="m-0 cl-white">+254 791 259985</p>
             </div>
           </div>
         </div>
@@ -111,7 +110,7 @@ function ContactUs() {
           <p className="call-to-mid cl-white">Contact us for all questions and thinks those. We will proud to you</p>
         </div>
         <div className="col-lg-4 col-md-12 text-center">
-          <a href="contact.html" className="btn btn-white">Get Consultation</a>
+          <a href="#" className="btn btn-white">Get Consultation</a>
         </div>
       </div>
     </div>
