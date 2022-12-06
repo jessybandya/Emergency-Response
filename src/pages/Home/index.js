@@ -204,6 +204,7 @@ useEffect(() => {
       <TableRow >
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}}>DATE</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">SEVERITY</TableCell>
+        <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">LOCATION</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">URGENCY</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">VICTIM(S)</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">STATUS</TableCell>
@@ -226,6 +227,7 @@ useEffect(() => {
           victims={post?.victims} 
           solved={post?.solved} 
           fromId={post?.fromId}   
+          address={post?.location} 
           />
           )
         )
@@ -244,6 +246,7 @@ useEffect(() => {
       <TableRow >
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}}>DATE</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">SEVERITY</TableCell>
+        <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">LOCATION</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">URGENCY</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">VICTIM(S)</TableCell>
         <TableCell sx={{backgroundColor: "#20c997",fontWeight:"900",borderBottom: "2px solid #fff",color:`#fff`}} align="right">STATUS</TableCell>
@@ -281,6 +284,7 @@ useEffect(() => {
           victims={post?.victims} 
           solved={post?.solved} 
           fromId={post?.fromId}   
+          address={post?.location} 
           />
           )
         )

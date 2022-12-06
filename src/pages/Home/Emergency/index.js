@@ -31,7 +31,7 @@ import { useTheme } from '@mui/material/styles';
 import { db } from "../../../firebase"
 import {  toast } from 'react-toastify';
 
-function Emergency({ postId, date, severity, timestamp, urgency, victims, solved, fromId }) {
+function Emergency({ postId, date, severity, timestamp, urgency, victims, solved, fromId, address }) {
     const [senderInfoModal, setSenderInfoModal] = React.useState(false);
     const [senderInfo, setSenderInfo] = React.useState('');
     useEffect(() => {
@@ -70,6 +70,7 @@ function Emergency({ postId, date, severity, timestamp, urgency, victims, solved
     <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
       <TableCell component="th" scope="row">{date}</TableCell>
       <TableCell align="right">{severity}</TableCell>
+      <TableCell align="right">{address}</TableCell>
       <TableCell align="right">{urgency}</TableCell>
       <TableCell align="right">{victims}</TableCell>
       <TableCell style={{fontWeight:'900'}} align="right">pending...</TableCell>

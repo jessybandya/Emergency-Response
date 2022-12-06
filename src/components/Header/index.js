@@ -1,12 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import FacebookIcon from '@mui/icons-material/Facebook';
-import AccessAlarmsIcon from '@mui/icons-material/AccessAlarms';
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
-import SearchIcon from '@mui/icons-material/Search';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import EmailIcon from '@mui/icons-material/Email';
 import {Modal} from "react-bootstrap"
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
@@ -34,7 +26,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-
+import GooglePlacesAutocomplete, { geocodeByAddress, getLatLng, geocodeByLatLng } from 'react-google-places-autocomplete';
+import { updateLatitude, updateLongitude, updateAddress } from '../../redux/dataSlice';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
@@ -63,6 +56,7 @@ import Badge from '@mui/material/Badge';
 import Notifications from './Notifications';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateAuthId } from '../../redux/dataSlice';
+import Geocode from "react-geocode";
 
 const labels = {
   0.5: 'Useless',
@@ -133,7 +127,9 @@ function Header() {
     const [phoneBa, setPhoneBa] = useState('')
     const [emailBa, setEmailBa] = useState('')
     const [selectedDateBa, setSelectedDateBa] = useState(currentDate)
-
+    const latitude = useSelector((state) => state.latitude);
+    const longitude = useSelector((state) => state.longitude);
+    const [address, setAddress] = useState('')
     const [value2, setValue2] = React.useState(currentDate);
     // SignUp
     const [name, setName] = useState('')
@@ -184,6 +180,35 @@ const handleChangeUrgency = (event) => {
 };
 
 const [comment1, setComment1] = React.useState('');
+
+const [lat, setLat] = useState(``)
+const [long, setLong] = useState(``)
+
+
+const getLocation = () =>{
+  navigator.geolocation.getCurrentPosition(function(position) {
+
+    var lat1 = position.coords.latitude
+    var long1 = position.coords.longitude
+    setLat(lat1)
+    setLong(long1)
+  });
+}
+
+
+Geocode.setApiKey("AIzaSyCAawMnC6vfUa40ZNFsLN-ov7Pa4DjcUrM");
+Geocode.enableDebug();
+Geocode.fromLatLng(lat, long).then(
+  response => {
+    const address = response.results[0].formatted_address;
+    console.log(address);
+    setAddress(address)
+  },
+  error => {
+    console.error(error);
+  }
+);
+
 
 const handleChangeComment = (event) => {
   setComment1(event.target.value);
@@ -342,6 +367,8 @@ const handleChangeComment = (event) => {
 
 
     const sendEmergency = (event) => {
+      getLocation()
+
         event.preventDefault();
         // if (birthday[2] >= 2010) {
         //     return alert("You are not eligible to register to Facebook!")
@@ -365,6 +392,8 @@ const handleChangeComment = (event) => {
             }else if(!victims.trim()){
                 setLoading(false)
                 errors.victims = toast.error('No. of Victims is required');
+            }else if(address === ''){
+              toast.warn("Confirm by clicking the send button\nThen allow again.")
             }else{
     
     
@@ -376,12 +405,15 @@ const handleChangeComment = (event) => {
                             fromId:auth?.currentUser?.uid,
                             solved:false,
                             read:true,
+                            location:address,
                             timestamp:Date.now()
                            })
                            .then((r) => {
                             setLoading(false)
                             toast.success("Your info has been sent to the admin!")
                             setSendData(false)
+                            setLat('')
+                            setLong('')
                         })                
                 
               }   
@@ -735,7 +767,8 @@ useEffect(() => {
 
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar> 
+
 
   <Modal
   show={signInsignUp}
@@ -1368,6 +1401,8 @@ style={{zIndex:1200}}
 }
 </Modal.Body>
 </Modal>
+
+
     </div>
   )
 }
